@@ -1,6 +1,8 @@
 name(readability_parser).
 title('Readability Parser API').
-    
+
+requires(uri_qq).
+
 version('0.0.1').
 download('http://packs.ndrix.com/readability_parser/readability_parser-0.0.1.tgz').
 

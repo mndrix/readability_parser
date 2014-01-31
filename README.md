@@ -1,19 +1,26 @@
 # Synopsis
 
     :- use_module(library(readability_parser)).
-    main :-
-        % give one motivating example
-        true.
+    ?- build_agent("f861ea4...", Agent),
+       parse(Agent, 'http://foo.com/article.html', Response).
+    Response = _{ author: "John Doe"
+                , content: "A long time ago ..."
+                , title: "A Fairy Tale"
+                , word_count: 372
+                ...
+                }.
 
 # Description
 
+Access [Readability's parser API](https://www.readability.com/developers/api/parser) for extracting article content from an HTML page.
+
 # Changes in this Version
 
-  * ...
+  * Initial public release
 
 # Installation
 
-Using SWI-Prolog 6.3 or later:
+Using SWI-Prolog 7.1.5 or later:
 
     ?- pack_install(readability_parser).
 

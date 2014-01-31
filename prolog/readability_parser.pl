@@ -54,7 +54,18 @@ identifier_type(UrlOrId, Type) :-
 % make request to Readability
 parse(Args, Response) :-
     Url = {|uri||https://www.readability.com/api/content/v1/parser?$Args|},
-    setup_call_cleanup( http_open(Url,Stream,[timeout(10)])
+    setup_call_cleanup( http_open(Url,Stream,[ cert_verify_hook(ssl_verify)
+                                             , timeout(10)
+                                             ]
+                                 )
                       , json_read_dict(Stream, Response)
                       , close(Stream)
                       ).
+
+% accept all SSL certificates
+ssl_verify( _SSL
+          , _ProblemCertificate
+          , _AllCertificates
+          , _FirstCertificate
+          , _Error
+          ).

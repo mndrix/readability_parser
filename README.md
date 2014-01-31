@@ -16,7 +16,7 @@ Access [Readability's parser API](https://www.readability.com/developers/api/par
 
 # Changes in this Version
 
-  * Initial public release
+  * Accept Readability SSL certificate
 
 # Installation
 

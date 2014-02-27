@@ -16,7 +16,7 @@ Access [Readability's parser API](https://www.readability.com/developers/api/par
 
 # Changes in this Version
 
-  * Accept Readability SSL certificate
+  * Handle utf8 characters in documents
 
 # Installation
 

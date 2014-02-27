@@ -58,7 +58,9 @@ parse(Args, Response) :-
                                              , timeout(10)
                                              ]
                                  )
-                      , json_read_dict(Stream, Response)
+                      , ( set_stream(Stream, encoding(utf8))
+                        , json_read_dict(Stream, Response)
+                        )
                       , close(Stream)
                       ).
 

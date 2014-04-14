@@ -53,7 +53,7 @@ identifier_type(UrlOrId, Type) :-
 
 % make request to Readability
 parse(Args, Response) :-
-    Url = {|uri||https://www.readability.com/api/content/v1/parser?$Args|},
+    Url = {|uri||http://www.readability.com/api/content/v1/parser?$Args|},
     setup_call_cleanup( http_open(Url,Stream,[ cert_verify_hook(ssl_verify)
                                              , timeout(10)
                                              ]

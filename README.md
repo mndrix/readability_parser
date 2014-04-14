@@ -16,7 +16,7 @@ Access [Readability's parser API](https://www.readability.com/developers/api/par
 
 # Changes in this Version
 
-  * Handle utf8 characters in documents
+  * Workaround Readability SSL weirdness
 
 # Installation
 

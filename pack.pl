@@ -3,8 +3,8 @@ title('Readability Parser API').
 
 requires(uri_qq).
 
-version('0.0.3').
-download('http://packs.ndrix.com/readability_parser/readability_parser-0.0.3.tgz').
+version('0.0.4').
+download('http://packs.ndrix.com/readability_parser/readability_parser-0.0.4.tgz').
 
 author('Michael Hendricks','michael@ndrix.org').
 packager('Michael Hendricks','michael@ndrix.org').
